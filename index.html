@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MotherFlier | 飞妈者联盟</title>
+    <meta name="description" content="揭露飞行者联盟背后的种种">
+    <meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
+    <meta name="theme-color" content="#0882a9">
+    <link rel="shortcut icon" href="/images/motherflier_Avatar.ico">
+    <!--<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>-->
+    <script src="webcomponents-lite.min.js"></script>
+    <!--<link rel="import" href="elements.html">-->
+    <link rel="import" href="vulcanized.min.html">
+    <style is="custom-style">
+        :root {
+            --paper-drawer-panel-main-container: {
+                overflow: hidden;
+                background: var(--paper-grey-100);
+            };
+            --paper-drawer-panel-drawer-container: {
+                @apply(--shadow-elevation-4dp);
+            };
+            --paper-scroll-header-panel-full-header: {
+                background-image: url('images/toolbar.png');
+            };
+            --paper-scroll-header-panel-condensed-header: {
+                background-color: #000;
+                opacity: 1 !important;
+            };
+            --paper-toolbar: {
+                @apply(--paper-font-title);
+                padding: 0 10px;
+                transition: height 0.2s;
+                background-color: transparent;
+                @apply(--shadow-elevation-4dp);
+            };
+        }
+        body {
+            @apply(--paper-font-common-base);
+            @apply(--paper-font-common-expensive-kerning);
+        }
+
+        .clickable-item {
+            cursor: pointer;
+        }
+
+        #main_drawer [main] .main-toolbar .title {
+            @apply(--paper-font-display1);
+            font-size: 30px;
+        }
+
+        #main_drawer [main] #main_content {
+            padding: 8px;
+        }
+        paper-item[bottom] {
+            bottom: 0;
+            position: absolute;
+        }
+        .social-buttons-container {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+        }
+        .social-buttons-container paper-fab {
+            margin: 0 1em;
+        }
+        .social-buttons-container > * {
+            margin: 0;
+        }
+        p {
+            line-height: 1.7em;
+        }
+
+        footer > paper-toolbar {
+            color: var(--paper-grey-700);
+            background-color: var(--paper-grey-100);
+            font-size: 1rem;
+            word-wrap: normal;
+        }
+        @media (max-width: 480px) {
+            #main_drawer [main] .main-toolbar .title {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 360px) {
+            #main_drawer [main] .main-toolbar .title {
+                font-size: 15px;
+            }
+        }
+        @media (max-width: 320px) {
+            #main_drawer [main] .main-toolbar .title {
+                font-size: 13px;
+            }
+        }
+        #bannerad {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        #bannerad .adsbygoogle {
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        #sidead {
+            display: flex;
+            justify-content: center;
+        }
+        #sidead .adsbygoogle {
+            display: inline-block;
+            width: 220px;
+            height: 600px;
+            margin: 30px auto;
+        }
+    </style>
+    <style>
+        .collection-list {
+            background: white;
+            box-sizing: border-box;
+            display: block;
+            position: relative;
+            border-radius: 2px;
+            font-size: 1em;
+            color: #555555;
+            font-weight: 400;
+            margin: 2em 16px 16px;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+        }
+        .collection-list h2 {
+            border-bottom: 1px solid rgba(160, 160, 160, 0.4);
+            padding: 1.5em;
+            text-align: center;
+            color: #0781aa;
+            font-weight: normal;
+            margin: 0;
+        }
+        .collection-list p {
+            border-bottom: 1px solid rgba(160, 160, 160, 0.4);
+            padding: 1.5em;
+            margin: 0;
+        }
+        .collection-list p:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="fullbleed layout vertical" unresolved>
+<paper-drawer-panel id="main_drawer">
+    <div drawer>
+        <paper-menu class="drawer-menu" attr-for-selected="url">
+            <paper-icon-item class="clickable-item" url="/">
+                <iron-icon icon="home" item-icon></iron-icon>
+                首页
+            </paper-icon-item>
+            <paper-icon-item class="clickable-item" url="/about">
+                <iron-icon icon="info" item-icon></iron-icon>
+                关于
+            </paper-icon-item>
+
+            <!-- <paper-item bottom>
+                <paper-item-body>
+                    <div class="social-buttons-container">
+                        <a href="https://plus.google.com/communities/109863800475536262348" target="_blank">
+                            <paper-fab mini src="icons/gplus.png" style="background-color: #dd4b39;"></paper-fab>
+                        </a>
+                    </div>
+                </paper-item-body>
+            </paper-item> -->
+        </paper-menu>
+    </div>
+    <paper-scroll-header-panel main condenses keep-condensed-header>
+        <paper-toolbar class="main-toolbar tall">
+            <paper-icon-button class="drawer-toggle" icon="menu" paper-drawer-toggle></paper-icon-button><div class="bottom title">motherflier<span id="sub_title"></span></div>
+            <div class="flex"></div>
+            <paper-icon-button icon="search"></paper-icon-button>
+        </paper-toolbar>
+        <app-router id="main_content" init="manual" trailingSlash="ignore">
+            <app-route path="/" import="pages/home.html" element="motherflier-pages-home"></app-route>
+            <app-route path="/about" import="pages/about.html" element="motherflier-pages-about"></app-route>
+            <app-route path="/faq" import="pages/faq.html" element="motherflier-pages-faq"></app-route>
+            <app-route path="*" redirect="/"></app-route>
+        </app-router>
+        <footer>
+            <paper-toolbar>
+                <div class="flex"></div>
+                <div>
+                    &copy; SkyLeap
+                </div>
+            </paper-toolbar>
+        </footer>
+    </paper-scroll-header-panel>
+</paper-drawer-panel>
+
+<script>
+    function switch_page() {
+        document.querySelector('app-router').go(this.getAttribute('url'));
+        document.querySelector('#main_drawer').closeDrawer();
+    }
+
+    (function () {
+        var items = document.querySelectorAll('.drawer-menu .clickable-item');
+        for (var i = 0, len=items.length; i < len; i++) {
+            items[i].addEventListener('click', switch_page, false);
+        }
+    })();
+
+    window.addEventListener('WebComponentsReady', function() {
+        var router = document.querySelector('app-router');
+
+        router.addEventListener('activate-route-start', function(event) {
+            document.querySelector('#main_drawer .drawer-menu').selected = event.detail.path;
+        });
+
+        router.addEventListener('activate-route-end', function(event) {
+            var path = event.detail.path;
+            if (path === '/') path = '/home';
+            var words = path.slice(1).split('-');
+            var sub = '';
+            for (var i in words) {
+                var w = words[i];
+                if (sub != '') sub += ' ';
+                sub += w[0].toUpperCase();
+                sub += w.slice(1);
+            }
+            document.querySelector('#sub_title').innerHTML = ' - ' + sub;
+
+            var title;
+            if (document.title.indexOf(' - ') != -1) {
+                title = document.title.slice(0, document.title.indexOf(' - ') + 3);
+            } else {
+                title = document.title + ' - ';
+            }
+            document.title = title + sub;
+        });
+        router.init();
+    });
+</script>
+
+
+</body>
+</html>

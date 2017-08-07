@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-update": "^0.1.2",
+    "grunt-bower-install-simple": "^1.1.4",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-minify-polymer": "^2.0.1",
+    "grunt-vulcanize": "^1.0.0"
+  }
+}

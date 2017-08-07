@@ -1,0 +1,74 @@
+[
+  {
+    "manufacturer":"Samsung",
+    "devicename":"klimtwifi",
+    "description":"Galaxy Tab S 8.4 Wifi (SM-T700)",
+    "img":"images/phone/klimtwifi.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"klimtlte",
+    "description":"Galaxy Tab S 8.4 LTE (SM-T705)",
+    "img":"images/phone/klimtlte.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"chagallwifi",
+    "description":"Galaxy Tab S 10.5 Wifi (SM-T800)",
+    "img":"images/phone/chagallwifi.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"chagalllte",
+    "description":"Galaxy Tab S 10.5 LTE (SM-T805)",
+    "img":"images/phone/chagalllte.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"chagallltetmo",
+    "description":"Galaxy Tab S 10.5 LTE T-Mobile Variant (SM-T807T)",
+    "img":"images/phone/chagallltetmo.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"n1awifi",
+    "description":"Galaxy Note 10.1 2014 Wifi (SM-P600)",
+    "img":"images/phone/n1awifi.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"n1a3g",
+    "description":"Galaxy Note 10.1 2014 3G (SM-P601)",
+    "img":"images/phone/n1a3g.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"n2awifi",
+    "description":"Galaxy Tab Pro 10.1 Wifi (SM-T520)",
+    "img":"images/phone/n2awifi.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"v1awifi",
+    "description":"Galaxy Note 12.1 Wifi (SM-P900)",
+    "img":"images/phone/v1awifi.jpg"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"v1a3g",
+    "description":"Galaxy Note 12.1 3G (SM-P901)",
+    "img":"images/phone/v1a3g.jpg"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"v2awifi",
+    "description":"Galaxy Tab Pro 12.1 Wifi (SM-T900)",
+    "img":"images/phone/v2awifi.png"
+  },
+  {
+    "manufacturer":"Samsung",
+    "devicename":"ha3g",
+    "description":"Galaxy Note 3 International (N900)",
+    "img":"images/phone/ha3g.png"
+  }
+]

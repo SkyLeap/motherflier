@@ -1,0 +1,100 @@
+<dom-module id="motherflier-pages-about"><template>
+    <style is="custom-style">
+        paper-card .center {
+            align-content: center;
+            text-align: center;
+        }
+        img {
+            width: 400px;
+        }
+        .flex-container {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .flex-container paper-card {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 30%;
+            text-align: center;
+        }
+        @media (max-width: 1100px) {
+            .flex-container paper-card {
+                flex-basis: 44%;
+            }
+        }
+        @media (max-width: 700px) {
+            .flex-container paper-card {
+                flex-basis: 70%;
+            }
+            img {
+                width: 330px;
+            }
+        }
+        @media (max-width: 480px) {
+            img {
+                width: 250px;
+            }
+        }
+        @media (min-width: 1700px) {
+            .flex-container paper-card {
+                flex-basis: 20%;
+            }
+        }
+        @media (min-width: 2300px) {
+            .flex-container paper-card {
+                flex-basis: 15%;
+            }
+        }
+        paper-card.credit-list::shadow paper-material {
+            margin: 0;
+            padding: 0.2em;
+        }
+        paper-card.credit-list::shadow .paper-card-title {
+            padding-top: 1.2em;
+            padding-bottom: 0.5em;
+            padding-left: 1.2em;
+            text-align: center;
+        }
+        .flex-container paper-card:last-child {
+            padding-bottom: 1em;
+        }
+        .credit-list paper-card {
+            margin: 1em;
+        }
+        .credit-list paper-card p {
+            font-size: 1.2em;
+        }
+        .company-info .info-heading {
+            margin-bottom: 2px;
+        }
+    </style>
+    <paper-card>
+        <p class="center"><b>关于飞妈妈者联盟</b></p>
+        <p>WIP</p>
+    </paper-card>
+
+
+    <paper-card class="credit-list">
+        <h3 class="title">General Credits</h3>
+        <div class="flex-container">
+            <paper-card elevation="2">
+                <p>TeamExynos5420 - Website Design</p>
+            </paper-card>
+        </div>
+    </paper-card>
+</template>
+<script>
+    Polymer({
+        is: 'motherflier-pages-about'
+    });
+</script>
+</dom-module>

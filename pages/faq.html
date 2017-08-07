@@ -1,0 +1,15 @@
+<dom-module id="motherflier-pages-faq">
+<template>
+        <template is="dom-bind">
+            <iron-ajax auto url="../data/faq.json" last-response="{{data}}"></iron-ajax>
+            <template is="dom-repeat" items="{{data}}">
+                <faq-post content="{{item.content}}" title="{{item.title}}"></faq-post>
+            </template>
+        </template>
+</template>
+<script>
+    Polymer({
+        is: 'motherflier-pages-faq'
+    });
+</script>
+</dom-module>
